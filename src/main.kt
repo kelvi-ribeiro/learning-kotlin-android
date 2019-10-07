@@ -1,21 +1,21 @@
 fun calculaBonus(cargo: String, salario:Float):Float {
     // Gerente Júnior, Gerente Sênior, Coordenador
 
-    var bonus:Float = salario
-    if(cargo == "Coordenador"){
-        bonus *=   1.2f
+    return if(cargo == "Coordenador"){
+        salario * 1.2f
     } else if (cargo === "Gerente Júnior") {
-        bonus *= 1.5f
+        salario * 1.5f
     } else {
-        bonus *= 2
+        salario * 2
     }
-    return bonus
-
 }
 // if - else
 fun maiorDeIdade(idade: Int) = idade >= 18
 
 fun main() {
+    val valor = 10
+    val str = if (valor == 10) "Sim" else "Não"
+    println(str)
     println(calculaBonus("Coordenador", 1000f))
     println(calculaBonus("Gerente Júnior", 1000f))
     println(calculaBonus("Gerente Sênior", 1000f))
