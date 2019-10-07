@@ -1,6 +1,7 @@
 fun calculaBonus(cargo: String, salario:Float):Float {
     // Gerente Júnior, Gerente Sênior, Coordenador
 
+    // when
     return if(cargo == "Coordenador"){
         salario * 1.2f
     } else if (cargo === "Gerente Júnior") {
