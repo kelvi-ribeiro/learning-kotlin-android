@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3862ad9d-3975-44ed-aa03-97e4f30029b5" name="Default Changelist" comment="Initial Commit: Ola Mundo!">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Desenvolvimento de aplicativos Android usando Kotlin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Desenvolvimento de aplicativos Android usando Kotlin/META-INF/Desenvolvimento de aplicativos Android usando Kotlin.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Desenvolvimento de aplicativos Android usando Kotlin/MainKt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Desenvolvimento de aplicativos Android usando Kotlin/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Desenvolvimento de aplicativos Android usando Kotlin/MainKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +41,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -96,6 +86,66 @@
       <option name="presentableId" value="Default" />
       <updated>1569799275558</updated>
     </task>
+    <task id="LOCAL-00001" summary="Aula 14. Declaração de Variáveis">
+      <created>1570409270815</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570409270815</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Aula 16. Variáveis mutáveis e imutáveis">
+      <created>1570410277193</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570410277193</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Aula 17. Formatação de Strings">
+      <created>1570410802809</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1570410802809</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Aula 18. Criação de funções">
+      <created>1570411434241</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570411434241</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Aula 19. Funções em uma única linha">
+      <created>1570412430770</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1570412430770</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Aula 21. Criação de fluxo - if else - Parte 1">
+      <created>1570414126228</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1570414126228</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Aula 22. Apredendo como o if se comporta no Kotlin e porque não existe operador ternário">
+      <created>1570414749645</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1570414749645</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Aula 14. Declaração de Variáveis" />
+    <MESSAGE value="Aula 16. Variáveis mutáveis e imutáveis" />
+    <MESSAGE value="Aula 17. Formatação de Strings" />
+    <MESSAGE value="Aula 18. Criação de funções" />
+    <MESSAGE value="Aula 19. Funções em uma única linha" />
+    <MESSAGE value="Aula 21. Criação de fluxo - if else - Parte 1" />
+    <MESSAGE value="Aula 22. Apredendo como o if se comporta no Kotlin e porque não existe operador ternário" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aula 22. Apredendo como o if se comporta no Kotlin e porque não existe operador ternário" />
   </component>
 </project>

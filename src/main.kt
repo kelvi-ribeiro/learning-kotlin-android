@@ -16,6 +16,10 @@ fun main() {
     val valor = 10
     val str = if (valor == 10) "Sim" else "Não"
     println(str)
+    // Operador Elvis ?:
+    val teste:Int? = null
+    val op = teste ?: "Operador Elvis" // Se teste não estiver atribuído, atribui o valor da direita
+    println(op)
     println(calculaBonus("Coordenador", 1000f))
     println(calculaBonus("Gerente Júnior", 1000f))
     println(calculaBonus("Gerente Sênior", 1000f))
