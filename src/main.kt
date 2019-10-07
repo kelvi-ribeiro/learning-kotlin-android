@@ -1,20 +1,19 @@
+// Unit === void
+
+fun calculaBonus(a: Int, b: Int, c: Int){
+    println("O bônus é ${a + b * c}")
+}
+
+fun hello(nome: String):String {
+    return "Olá, $nome"
+}
+
 fun main() {
-    val frase = "Kotlin é uma linguagem"
-    val caracteristica = " Show"
+    val a = 10
+    val b = 20
+    val c = 30
 
-    // println("$frase$caracteristica")
+    calculaBonus(a,b,c)
 
-    val str = """dsdasdasd
-        |adadadasdasdas
-        |dasdadasdasdasd
-        |sdasdasdasda
-        |
-        |dadasdasdasd
-        |
-        |adadasd
-    """.trimMargin()
-
-    println(str)
-
-     println("$frase ${caracteristica.length}")
+    println(hello("Kelvi"))
 }
