@@ -1,10 +1,20 @@
 fun main() {
+    val frase = "Kotlin é uma linguagem"
+    val caracteristica = " Show"
 
-    // Variáveis mutáveis: variável que pode ser alterada
-    var nome = "José da Silva"
+    // println("$frase$caracteristica")
 
-    // Variáveis imutáveis: variável que não pode ser alterada
-    val idade = 10
+    val str = """dsdasdasd
+        |adadadasdasdas
+        |dasdadasdasdasd
+        |sdasdasdasda
+        |
+        |dadasdasdasd
+        |
+        |adadasd
+    """.trimMargin()
 
-    println(nome)
+    println(str)
+
+     println("$frase ${caracteristica.length}")
 }
