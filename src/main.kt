@@ -1,7 +1,10 @@
 fun main() {
-    println("Olá mundo")
 
-    var nome = "Kelvi"
-    var idade = 13
+    // Variáveis mutáveis: variável que pode ser alterada
+    var nome = "José da Silva"
 
+    // Variáveis imutáveis: variável que não pode ser alterada
+    val idade = 10
+
+    println(nome)
 }
