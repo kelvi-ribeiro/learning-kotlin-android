@@ -1,21 +1,23 @@
-// Unit === void
+fun calculaBonus(cargo: String, salario:Float):Float {
+    // Gerente Júnior, Gerente Sênior, Coordenador
 
-fun calculaBonus(a: Int, b: Int, c: Int){
-    println("O bônus é ${a + b * c}")
+    var bonus:Float = salario
+    if(cargo == "Coordenador"){
+        bonus *=   1.2f
+    } else if (cargo === "Gerente Júnior") {
+        bonus *= 1.5f
+    } else {
+        bonus *= 2
+    }
+    return bonus
+
 }
-
-fun hello(nome: String):String {
-    return "Olá, $nome"
-}
-
-fun helloInOneLine(nome: String) = "Olá, $nome"
-
-fun soma(a:Int, b: Int) = a + b
+// if - else
+fun maiorDeIdade(idade: Int) = idade >= 18
 
 fun main() {
-    val a = 10
-    val b = 20
-    val c = 30
+    println(calculaBonus("Coordenador", 1000f))
+    println(calculaBonus("Gerente Júnior", 1000f))
+    println(calculaBonus("Gerente Sênior", 1000f))
 
-    println(soma(50,50))
 }
