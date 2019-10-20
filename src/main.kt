@@ -1,9 +1,22 @@
-fun endereco(rua: String = "", cidade: String, estado: String, cep: String, numero: Int = 0){
-    println("Rua: $rua")
-    println("Cidade: $cidade, $estado - $cep")
+fun media(vararg  notas:Float){
+    if(notas.isNotEmpty()){
+        var soma = 0f
+        for(nota in notas){
+            soma += nota
+        }
+        println("A média é ${soma / notas.size}")
+    }
 }
 
+fun <T> media(vararg valores: T){
+    for(valor in valores){
+        println(valor)
+    }
+}
+
+
 fun main() {
-    endereco(cidade = "Campinas" , estado = "São Paulo", cep = "13")
-    endereco(rua = "Rua dos Marujos", cidade = "Belford Roxo" , estado = "Rio de Janeiro", cep = "26120-180")
+    //media(9f,9f)
+    //media(8f,7f, 5f, 8f)
+    media(8,"Teste", false, 8f)
 }
