@@ -1,28 +1,9 @@
-fun calculaBonus(cargo: String, salario:Float):Float {
-    // Gerente Júnior, Gerente Sênior, Coordenador
-
-    // when
-    return if(cargo == "Coordenador"){
-        salario * 1.2f
-    } else if (cargo === "Gerente Júnior") {
-        salario * 1.5f
-    } else {
-        salario * 2
-    }
+fun endereco(rua: String = "", cidade: String, estado: String, cep: String, numero: Int = 0){
+    println("Rua: $rua")
+    println("Cidade: $cidade, $estado - $cep")
 }
-// if - else
-fun maiorDeIdade(idade: Int) = idade >= 18
 
 fun main() {
-    val valor = 10
-    val str = if (valor == 10) "Sim" else "Não"
-    println(str)
-    // Operador Elvis ?:
-    val teste:Int? = null
-    val op = teste ?: "Operador Elvis" // Se teste não estiver atribuído, atribui o valor da direita
-    println(op)
-    println(calculaBonus("Coordenador", 1000f))
-    println(calculaBonus("Gerente Júnior", 1000f))
-    println(calculaBonus("Gerente Sênior", 1000f))
-
+    endereco(cidade = "Campinas" , estado = "São Paulo", cep = "13")
+    endereco(rua = "Rua dos Marujos", cidade = "Belford Roxo" , estado = "Rio de Janeiro", cep = "26120-180")
 }
