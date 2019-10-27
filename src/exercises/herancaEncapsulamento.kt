@@ -1,7 +1,7 @@
 package exercises
 
 /*
-    Heraça: Para que uma classe seja herdada por outra, precisamos que a classe
+    Herança: Para que uma classe seja herdada por outra, precisamos que a classe
     pai tenha a palavra reservada de open, além disso, na classe filha, precisamos
     chamar o construtor da classe pai passando os parâmetros
     Overide: Para sobreescrever métodos no Kotlin, é necessário a palavra reservada open
@@ -32,6 +32,9 @@ class Computador(marca: String, val nucleos: Int) : Maquina(marca){
     }
     fun operacoes(){
         println("Operações")
+    }
+    private fun validate(){
+        println("Validando...")
     }
 }
 
