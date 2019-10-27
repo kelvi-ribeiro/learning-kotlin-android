@@ -23,6 +23,10 @@ data class Food(val name: String, val calories: Double, val ingredients: List<In
 
 data class Ingredients(val name: String, val quantity: Int)
 
+fun hasIngredient(list: List<Ingredients>, name: String):Boolean{
+    return list.filter { it.name === name }.any()
+}
+
 fun main(args: Array<String>) {
     val data = listOf(
         Food(
@@ -99,8 +103,11 @@ fun main(args: Array<String>) {
         .map { Pair(it.name, it.calories) }
         .forEach{ println("${it.first}: ${it.second} calorias")}
 
-    // Quais das receitas possui farinha como ingrediente ?
-    data.filter { it.ingredients.filter { it.name == "Farinha" }.any()}
-        .forEach{ println("A receita de ${it.name} possui farinha")}
+    // Quais das receitas possui farinha como ingrediente ? minha solução
+    // data.filter { it.ingredients.filter { it.name == "Farinha" }.any()}
+    //    .forEach{ println("A receita de ${it.name} possui farinha")}
+
+    // Quais das receitas possui farinha como ingrediente ? solução do professor
+    val result = data.filter { hasIngredient(it.ingredients, "Farinha") }.forEach{println(it.name)}
 
 }
