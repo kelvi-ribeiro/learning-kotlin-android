@@ -14,6 +14,9 @@ package exercises.collections
 
     O método withIndex usado um for serve para além de ter o valor
     daquele elemento de array numa interação, também seja possível pegar o index
+
+    a palavra reservada it é o elemento default a ser interado dentro de um escopo de interação de uma lista
+    como forEach, filter, map e etc...
  */
 
 data class Food(val name: String, val calories: Double, val ingredients: List<Ingredients> = listOf())
@@ -50,6 +53,8 @@ fun main(args: Array<String>) {
         )
     )
 
+    // --------------------------------- Usage parte 1 ---------------------------------
+
     // Tenho receitas na lista ?
 
     println("Tenho receitas ? ${if (data.any()) "Sim" else "Não"}.")
@@ -72,5 +77,30 @@ fun main(args: Array<String>) {
     for (x in firstTwo.withIndex()){
         println("${x.index + 1} - ${x.value.name}")
     }
+
+    // --------------------------------- Usage parte 2 ---------------------------------
+
+    // Sei como fazer panqueca ? e sushi ?
+
+    val knowPancake = data.filter { it.name == "Panqueca" }.any()
+
+    val knowSushi = data.filter { it.name == "Shush" }.any()
+    println("Sei fazer panqueca ? ${if(knowPancake) "Sim" else "Não"}")
+
+    println("Sei fazer sushi ? ${if(knowSushi) "Sim" else "Não"}")
+
+    // Quais são as comidas com mais de 500 calorias ?
+    val more500Calories = data.filter { it.calories > 500 }.forEach{ println(it.name)}
+
+
+    // Par(chave, valor) de comidas com mais de 500 calorias(name, calories)
+
+    data.filter { it.calories > 500 }
+        .map { Pair(it.name, it.calories) }
+        .forEach{ println("${it.first}: ${it.second} calorias")}
+
+    // Quais das receitas possui farinha como ingrediente ?
+    data.filter { it.ingredients.filter { it.name == "Farinha" }.any()}
+        .forEach{ println("A receita de ${it.name} possui farinha")}
 
 }
