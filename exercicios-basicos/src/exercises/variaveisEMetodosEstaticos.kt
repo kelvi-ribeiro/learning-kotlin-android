@@ -5,9 +5,9 @@ package exercises
     métodos que irão fica num escopo num estático. Em outras palavras,
     os recursos da classe que são declaradas dentro um companion object ficam
     no escopo da classe e não de uma instância da classe, pode-se criar hieraraquias, mas o nome é necessário
-    para isso
+    para isso. Também é possível criar singletons com o mesmo
     Object: Tem os mesmo recursos de companion object, mas precisa ter um nome associado e
-    com ele, podemos fazer uma hieraraquia de objets
+    com ele, podemos fazer uma hieraraquia de objets. Também é possível criar singletons com o mesmo
 
  */
 

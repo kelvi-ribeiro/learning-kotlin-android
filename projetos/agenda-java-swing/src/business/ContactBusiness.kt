@@ -32,4 +32,8 @@ class ContactBusiness {
         val contact = ContactEntity(name, phone)
         ContactRepository.delete(contact)
     }
+
+    fun getContacts(): List<ContactEntity> {
+        return ContactRepository.getContacts()
+    }
 }
