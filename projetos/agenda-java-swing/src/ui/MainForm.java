@@ -4,6 +4,8 @@ import business.ContactBusiness;
 import entity.ContactEntity;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -18,6 +20,8 @@ public class MainForm extends JFrame {
     private JLabel labelContactCount;
 
     private ContactBusiness mContactBusiness = new ContactBusiness();
+    private String mName = "";
+    private String mPhone = "";
 
     public MainForm() {
         setContentPane(rootPanel);
@@ -43,17 +47,33 @@ public class MainForm extends JFrame {
             }
         });
 
+        tableContacts.getSelectionModel().addListSelectionListener(listSelectionEvent -> {
+            if (listSelectionEvent.getValueIsAdjusting()) {
+                if (tableContacts.getSelectedRow() != -1) {
+                    mName = tableContacts.getValueAt(tableContacts.getSelectedRow(), 0).toString();
+                    mPhone = tableContacts.getValueAt(tableContacts.getSelectedRow(), 1).toString();
+                }
+            }
+        });
+
         buttonRemove.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-
+                try {
+                    mContactBusiness.delete(mName, mPhone);
+                    loadContacts();
+                    mName = "";
+                    mPhone = "";
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(new JFrame(), e.getMessage());
+                }
             }
         });
     }
 
     private void loadContacts() {
         List<ContactEntity> contactList = mContactBusiness.getContacts();
-        String[] colunNames = {"Nome","Telefone"};
+        String[] colunNames = {"Nome", "Telefone"};
         DefaultTableModel model = new DefaultTableModel(new Object[0][0], colunNames);
         contactList.forEach(contact -> {
             Object[] o = new Object[2];
