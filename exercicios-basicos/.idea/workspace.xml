@@ -17,18 +17,20 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1SZDfXlRrOdsZVTr6OHiy1CxoBs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/exercicios-basicos" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/moreFunctions" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="exercises.collections" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/moreFunctions" />
       <recent name="$PROJECT_DIR$/src/exercises/collections" />
       <recent name="$PROJECT_DIR$/src/exercises" />
     </key>
@@ -45,7 +47,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.exercises.collections.UsageKt">
+  <component name="RunManager" selected="Kotlin.moreFunctions.OperatorOverloadingKt">
     <configuration name="VowelConsonantTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Desenvolvimento de aplicativos Android usando Kotlin" />
       <extension name="coverage">
@@ -74,32 +76,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="exercises.PolimorfismoKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="Desenvolvimento de aplicativos Android usando Kotlin" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="exercises.PolimorfismoKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="exercises.collections.IntroductionKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="Desenvolvimento de aplicativos Android usando Kotlin" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="exercises.collections.IntroductionKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="exercises.collections.UsageKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="Desenvolvimento de aplicativos Android usando Kotlin" />
       <option name="VM_PARAMETERS" />
@@ -113,13 +89,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="moreFunctions.InfixFunctionKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="Desenvolvimento de aplicativos Android usando Kotlin" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="moreFunctions.InfixFunctionKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="moreFunctions.OperatorOverloadingKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="Desenvolvimento de aplicativos Android usando Kotlin" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="moreFunctions.OperatorOverloadingKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.moreFunctions.OperatorOverloadingKt" />
+        <item itemvalue="Kotlin.moreFunctions.InfixFunctionKt" />
         <item itemvalue="Kotlin.exercises.collections.UsageKt" />
         <item itemvalue="Kotlin.exercises.ClassesAbstratasKt" />
         <item itemvalue="JUnit.VowelConsonantTest" />
-        <item itemvalue="Kotlin.exercises.collections.IntroductionKt" />
-        <item itemvalue="Kotlin.exercises.PolimorfismoKt" />
       </list>
     </recent_temporary>
   </component>
