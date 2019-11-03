@@ -7,6 +7,11 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorPrimaryDark" />
+
     <EditText
         android:id="@+id/editDistance"
         style="@style/mCustomEditText"
@@ -20,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="2dp"
-        android:text="Total de Quilômetros"
+        android:text="@string/total_de_quilometros"
         android:textAllCaps="true"
         android:textColor="@color/colorDarkGrey"
         android:textSize="10sp" />
@@ -38,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="2dp"
-        android:text="Preço por litro"
+        android:text="@string/preco_por_litro"
         android:textAllCaps="true"
         android:textColor="@color/colorDarkGrey"
         android:textSize="10sp" />
@@ -58,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="2dp"
-        android:text="KMS por litro"
+        android:text="@string/kms_por_litro"
         android:textAllCaps="true"
         android:textColor="@color/colorDarkGrey"
         android:textSize="10sp" />
@@ -69,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:gravity="center"
-        android:text="Seu gasto total será de ?"
+        android:text="@string/seu_gasto_total_sera_de"
         android:textAllCaps="true"
         android:textSize="10sp" />
 
@@ -86,8 +91,14 @@
 
     <Button
         android:id="@+id/buttonCalculate"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/calcular" />
+        android:layout_margin="20dp"
+        android:background="@drawable/round_btn"
+        android:padding="20dp"
+        android:text="@string/calcular"
+        android:textAllCaps="true"
+        android:textColor="@color/colorLightGray"
+        android:textSize="20sp" />
 
 </LinearLayout>
