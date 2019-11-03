@@ -10,31 +10,60 @@
     <EditText
         android:id="@+id/editDistance"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/distancia"/>
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/round_et"
+        android:gravity="center"
+        android:hint="@string/distancia"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorDarkGrey" />
 
     <EditText
         android:id="@+id/editPrice"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/preco"/>
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/round_et"
+        android:gravity="center"
+        android:hint="@string/preco"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorDarkGrey" />
 
     <EditText
         android:id="@+id/editAutonomy"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/autonomia"/>
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/round_et"
+        android:gravity="center"
+        android:hint="@string/autonomia"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorDarkGrey" />
+
 
     <TextView
         android:id="@+id/textResult"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="R$ 0,00"/>
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/round_et"
+        android:hint="@string/distancia"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorDarkGrey" />
+    android:text="R$ 0,00" />
 
     <Button
         android:id="@+id/buttonCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/calcular"/>
+        android:text="@string/calcular" />
 
 </LinearLayout>
