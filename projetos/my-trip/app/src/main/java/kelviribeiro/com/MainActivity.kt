@@ -24,12 +24,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun handleCalculate() {
         if (isValid()) {
             try {
+                val distance = editDistance.text.toString().toFloat()
+                val price = editPrice.text.toString().toFloat()
+                val autonomy = editAutonomy.text.toString().toFloat()
+
+                val result = ( (distance * price) / autonomy )
+                textResult.setText("Total: R$ $result")
 
             } catch (nfe: NumberFormatException) {
                 Toast.makeText(this, getString(R.string.valores_validos), Toast.LENGTH_SHORT).show()
             }
         } else {
-                Toast.makeText(this, getString(R.string.valores_validos), Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.valores_validos), Toast.LENGTH_SHORT).show()
         }
     }
 
