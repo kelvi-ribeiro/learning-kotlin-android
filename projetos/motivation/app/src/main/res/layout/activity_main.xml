@@ -7,5 +7,61 @@
     tools:context=".MainActivity">
 
 
+    <LinearLayout
+        android:id="@+id/linerMenuFilter"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/imageAll"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/ic_all_unselected" />
+
+
+        <ImageView
+            android:id="@+id/imageSun"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/ic_sun_unselected" />
+
+
+        <ImageView
+            android:id="@+id/imageHappy"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/ic_happy_unselected" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuário"
+        app:layout_constraintTop_toBottomOf="@+id/linerMenuFilter" />
+
+    <TextView
+        android:id="@+id/textPhrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phrase"
+        app:layout_constraintTop_toBottomOf="@+id/textUsername" />
+
+    <Button
+        android:id="@+id/buttonNewPhrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nova_frase"
+        app:layout_constraintTop_toBottomOf="@id/textPhrase"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
