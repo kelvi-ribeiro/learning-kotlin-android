@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.kelvi.motivation.R
 import com.kelvi.motivation.util.MotivationConstants
 import com.kelvi.motivation.util.SecurityPreferences
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity(), View.OnClickListener {
@@ -19,6 +20,7 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_splash)
         mSecurity = SecurityPreferences(this)
         buttonSave.setOnClickListener(this)
+        verifyUsername()
     }
 
     override fun onClick(view: View) {
@@ -26,6 +28,10 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
         if (id == R.id.buttonSave) {
             handleSave()
         }
+    }
+
+    private fun verifyUsername() {
+        editName.setText(mSecurity.getStoreString(MotivationConstants.KEY.PERSON_NAME))
     }
 
     private fun handleSave() {
