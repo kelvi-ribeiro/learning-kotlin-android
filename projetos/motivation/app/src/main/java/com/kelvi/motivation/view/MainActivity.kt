@@ -1,7 +1,8 @@
-package com.kelvi.motivation
+package com.kelvi.motivation.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.kelvi.motivation.R
 
 class MainActivity : AppCompatActivity() {
 
