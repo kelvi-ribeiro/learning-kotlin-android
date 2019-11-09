@@ -1,8 +1,10 @@
 package com.kelvi.motivation
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.kelvi.motivation.util.MotivationConstants
 import com.kelvi.motivation.util.SecurityPreferences
 import kotlinx.android.synthetic.main.activity_splash.*
@@ -27,6 +29,16 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun handleSave() {
         val name = editName.text.toString()
-        mSecurity.storeString(MotivationConstants.KEY.PERSON_NAME,name)
+
+        if (name.isEmpty()) {
+            Toast.makeText(this, getString(R.string.informe_nome), Toast.LENGTH_LONG).show()
+        } else {
+            mSecurity.storeString(MotivationConstants.KEY.PERSON_NAME, name)
+
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            // Remove a activity(tela) atual da pilha, impedindo que seja possível voltar a esta activity
+            // finish()
+        }
     }
 }
