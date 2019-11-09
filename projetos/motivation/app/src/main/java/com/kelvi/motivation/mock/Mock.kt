@@ -1,8 +1,12 @@
 package com.kelvi.motivation.mock
 
 import com.kelvi.motivation.util.MotivationConstants
+import java.util.*
 
-class Phrase(description: String, category: Int)
+class Phrase(val description: String, val category: Int)
+
+fun Int.random() = Random().nextInt(this)
+
 
 class Mock {
     private val ALL = MotivationConstants.PHRASE_FILTER.ALL
@@ -24,4 +28,10 @@ class Mock {
         Phrase("Se você acredita, faz toda a diferença.", SUN),
         Phrase("Riscos devem ser corridos, porque o maior perigo é não arriscar nada!", SUN)
     )
+
+    fun getPhrase(category: Int): String {
+        val filtered = mListPhrases.filter { it.category == category || category == ALL }
+        val rand = (filtered.size).random()
+        return filtered[rand].description
+    }
 }

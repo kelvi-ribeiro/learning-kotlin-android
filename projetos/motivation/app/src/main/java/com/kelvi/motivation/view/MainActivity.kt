@@ -4,18 +4,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.kelvi.motivation.R
+import com.kelvi.motivation.mock.Mock
 import com.kelvi.motivation.util.MotivationConstants
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private var mFilter: Int = MotivationConstants.PHRASE_FILTER.ALL
+    private val mMock = Mock()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setListeners()
         handleFilter(R.id.imageAll)
+        refreshPhrase()
     }
 
     override fun onClick(view: View) {
@@ -23,7 +26,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val listId = listOf(R.id.imageAll, R.id.imageSun, R.id.imageHappy)
         if (id in listId) {
             handleFilter(id)
-        } else {
+        } else if(id === R.id.buttonNewPhrase) {
             refreshPhrase()
         }
     }
@@ -54,6 +57,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun refreshPhrase() {
-
+        textPhrase.text = mMock.getPhrase(mFilter)
     }
 }
