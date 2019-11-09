@@ -31,7 +31,12 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun verifyUsername() {
-        editName.setText(mSecurity.getStoreString(MotivationConstants.KEY.PERSON_NAME))
+        val username = mSecurity.getStoreString(MotivationConstants.KEY.PERSON_NAME)
+        if (username.isNullOrEmpty()) {
+            editName.setText(username)
+            return
+        }
+        startActivity(Intent(this, MainActivity::class.java))
     }
 
     private fun handleSave() {
