@@ -4,64 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_splash"
     tools:context=".view.MainActivity">
 
-
-    <LinearLayout
-        android:id="@+id/linerMenuFilter"
+    <View
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
+        android:layout_height="80dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:elevation="1dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" tools:ignore="MissingConstraints">
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
 
         <ImageView
             android:id="@+id/imageAll"
-            android:layout_width="0dp"
-            android:layout_height="35dp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             android:layout_gravity="center_vertical"
+            android:layout_marginTop="8dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_all_unselected" />
-
+            android:elevation="2dp"
+            android:src="@drawable/ic_all_unselected"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imageSun"
-            android:layout_width="0dp"
-            android:layout_height="35dp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
             android:layout_gravity="center_vertical"
+            android:elevation="2dp"
+            android:layout_marginTop="8dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_sun_unselected" />
+            android:src="@drawable/ic_sun_unselected"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-
-        <ImageView
-            android:id="@+id/imageHappy"
-            android:layout_width="0dp"
-            android:layout_height="35dp"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:src="@drawable/ic_happy_unselected" />
-
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/imageHappy"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:elevation="2dp"
+        android:src="@drawable/ic_happy_unselected"
+        app:layout_constraintEnd_toStartOf="@+id/imageSun"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageAll"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Usuário"
-        app:layout_constraintTop_toBottomOf="@+id/linerMenuFilter" tools:ignore="MissingConstraints"/>
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="150dp" />
 
     <TextView
         android:id="@+id/textPhrase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Phrase"
-        app:layout_constraintTop_toBottomOf="@+id/textUsername" tools:ignore="MissingConstraints"/>
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="178dp" />
 
     <Button
         android:id="@+id/buttonNewPhrase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="288dp"
         android:text="@string/nova_frase"
-        app:layout_constraintTop_toBottomOf="@id/textPhrase" tools:ignore="MissingConstraints"/>
+        app:layout_constraintTop_toBottomOf="@id/textPhrase"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="117dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
