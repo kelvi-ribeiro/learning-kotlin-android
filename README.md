@@ -1,6 +1,6 @@
 # Desenvolvimento de Aplicativos Android usando Kotlin!
 
-Este repositório possui os exercícios e projetos feitos [Curso](https://www.udemy.com/course/curso-desenvolvedor-kotlin/).
+Curso na Udemy de desenvolvimentos de aplicativos com Kotlin. Link do Curso:https://www.udemy.com/course/curso-desenvolvedor-kotlin/. Mas o principal objetivo foi de aprender os conceitos básicos de Kotlin e não de Android
 
 ## Variados
 
