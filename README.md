@@ -1,58 +1,53 @@
 ## Desenvolvimento de Aplicativos Android usando Kotlin!
 
-Curso na Udemy de desenvolvimentos de aplicativos com Kotlin. Link do Curso:https://www.udemy.com/course/curso-desenvolvedor-kotlin/. Mas o principal objetivo foi de aprender os conceitos básicos de Kotlin e não de Android
+Curso na Udemy de desenvolvimentos de aplicativos com Kotlin. Link do Curso:https://www.udemy.com/course/curso-desenvolvedor-kotlin/. Mas o principal objetivo foi de aprender os conceitos básicos de Kotlin e não de Android.
 
-## Variados
+### Orientação a Objetos
 
- ```kotlin
- // Range - é possível definir um intervalo de valores facilmente com o uso do when com o in ..
-    when (a) {
-        in 1..99 -> {
-            println("Século")
-        }
-    }
-```
+Abaixo, serão listados alguns recursos e definições de orientação de objetos, alguns que são exclusivos do **Kotlin**, separados por ***Palavras Reservadas** e **Definições**:
 
-## Definições
-
-```kotlin
-println(str?.length) // Assume ao Kotlin que não pode dar erro. O erro não é disparado`
-println(str!!.length) // Assume ao Kotlin que pode dar erro. O erro é disparado
-```
-
-### Básico
-
-**init:** É a palavra reservada e serve para executado independente de quantidade construtores.
- 
-**init:** É a palavra reservada e serve para executado independente de quantidade construtores.
-
-**Herança:** Para que uma classe seja herdada por outra, precisamos que a classe   pai tenha a palavra reservada de open, além disso, na classe filha, precisamos chamar o construtor da classe pai passando os parâmetros
-**Overide:** Para sobreescrever métodos no Kotlin, é necessário a palavra reservada open
-**Overload**: É quando se tem um método com assinatura diferente do pai
-**Assinatura:** É a quantidade de parâmetros e seus respectivos tipos de um método
-
-**Interface:** Define um contrato, a principal diferença entre uma classe abstrata e uma interface, é que a interface não pode possuir estado, ou seja não pode ter um atributo com atribuição de valor. Uma mudança recente fez que interfaces pudessem conter métodos com corpo e não a assinatura do mesmo.
-**Conceito de Herança/Interface:** Uma classe pode herdar somente uma classe, mas pode ter várias interfaces.
+#### Palavras Reservadas
 
  **lateinit:** É usado quando não se desejado criar uma variável com um valor, uma variável inicializada com lateinit sempre deve ser declarada com var, pois o que acontece por baixo dos panos é um atribuição automática.
  
  **with:** Se tivermos alguma variável que seja desejado fazer várias interações com ela, chamar seus métodos por ex, podemos fazer isso o with de uma forma muito mais simples, sem ter que repetir a varíavel a cada instrução.
- 
- #### Data Class
- 
-O data class serve muito bem para agregar um conjunto de dados, num jeito mais prático, variáveis,  pois ao invés de ter funções com vários parâmetros, pode-se ter um único parâmetro, sendo a data class com todos os parâmetros declarados como atributos.
-Além disso, com o data class, ganhamos um toString que é muito útil para transição desses dados. Outro benefício bem claro, é que por padrão, quando dois objetos de uma mesma classe comum são comparados, o que  vai ser comparado vai ser a posição da memória desses dois objetos, já com o data class, já ganhamos um comparador no qual é comporado os valores de um objeto e não o sua posição na memória.  Também ganhamos por default um método de copy() que é possível copiar um objeto A para um objeto B
 
+**init:** É a palavra reservada e serve para executado independente de quantidade construtores.
 
- 
- #### Métodos estáticos
- 
+#### Definições 
+Algumas definições de alguns conceitos de orientação de objeto e como utilizar alguns desses recursos com **Kotlin**.
+
+**Herança:** Para que uma classe seja herdada por outra, precisamos que a classe   pai tenha a palavra reservada de open, além disso, na classe filha, precisamos chamar o construtor da classe pai passando os parâmetros.
+
+**Overide:** Para sobreescrever métodos no Kotlin, é necessário a palavra reservada `open`.
+
+**Overload**: É quando se tem um método com assinatura diferente do pai.
+
+**Assinatura:** É a quantidade de parâmetros e seus respectivos tipos de um método.
+
+**Interface:** Define um contrato, a principal diferença entre uma classe abstrata e uma interface, é que a interface não pode possuir estado, ou seja não pode ter um atributo com atribuição de valor. Uma mudança recente fez que interfaces pudessem conter métodos com corpo e não a assinatura do mesmo.
+
+**Conceito de Herança/Interface:** Uma classe pode herdar somente uma classe, mas pode ter várias interfaces.
+
+#### Métodos estáticos
+
+Como utilizar métodos estáticos no Kotlin e definições de cada recurso para fazer isso:
+
  **Companion object:** Um objeto que não necessariamente tem um nome e serve para criar atributos, métodos que irão fica num escopo num estático. Em outras palavras, os recursos da classe que são declaradas dentro um companion object ficam no escopo da classe e não de uma instância da classe, pode-se criar hieraraquias, mas o nome é necessário para isso. Também é possível criar singletons com o mesmo
  **Object:** Tem os mesmo recursos de companion object, mas precisa ter um nome associado e com ele, podemos fazer uma hieraraquia de objets. Também é possível criar singletons com o mesmo.
  
+ #### Data Class
  
+ Como esse é um recurso exclusivo de Kotlin e muito extenso, foi resolvido ter uma seção só para esse Recurso.
  
+O **data class** serve muito bem para agregar um conjunto de dados, num jeito mais prático, variáveis,  pois ao invés de ter funções com vários parâmetros, pode-se ter um único parâmetro, sendo a data class com todos os parâmetros declarados como atributos.
+Além disso, com o **data class**, ganhamos um `toString` que é muito útil para transição desses dados. Outro benefício bem claro, é que por padrão, quando dois objetos de uma mesma classe comum são comparados, o que  vai ser comparado vai ser a posição da memória desses dois objetos, já com o data class, já ganhamos um comparador no qual é comporado os valores de um objeto e não o sua posição na memória.  Também ganhamos por default um método de `copy()` que é possível copiar um objeto A para um objeto B.
 
+**field:** É a palavra reservarda dentro de um contexto de get e set e serve para fazer uma atribuição(set) ou retorno(get) da variável em questão, pois usar o this diretamenta causa um loop chamando o método até estourar alguma exceção.
+  
+**inner:** É a palavra reservarda para declarar Classe interna(Nested Class).
+  
+**sealed:**: É a palavra reservada que serve para não permitir o uso da classe em arquivos externos da classe os usos são de herança.
 
 ### Funções
 
@@ -70,14 +65,6 @@ desejado dar um nome, apenas passar a função para uma execução.Diferente do 
 **Funções internas:** São funções dentro de funções que só ficam acessíveis dentro da função pai, e caso tenha uma função externa com o mesmo nome que a interna e seja desajado executar a função externa, usamos a palavra reservada deeper.${functionName}
   
 **Operator overloading:** Com ele, é possível criar funções que somam um objeto a outro objeto e muito mais.
-  
-  ### Mais Sobre Classes
-  
- **Field:** É a palavra reservarda dentro de um contexto de get e set e serve para fazer uma atribuição(set) ou retorno(get) da variável em questão, pois usar o this diretamenta causa um loop chamando o método até estourar alguma exceção.
-  
-**Nested Class:** Classe interna, e precisamos declarar a palavrada revervada inner para conseguir fazer isso.
-  
-**Sealed:** Serve para não permitir o uso da classe em arquivos externos da classe os usos são de herança.
 
 ### Collections(Listas)
 
@@ -98,5 +85,21 @@ desejado dar um nome, apenas passar a função para uma execução.Diferente do 
 4. O método take, com a quantidade de elementos como parâmetro nos retorna os primeiros $quantidadeElementos de um array
 5. O método withIndex usado um for serve para além de ter o valor  daquele elemento de array numa interação, também seja possível pegar o index.
 6. a palavra reservada it é o elemento default a ser interado dentro de um escopo de interação de uma lista como forEach, filter, map e etc...
+
+### Recursos interessantes do Kotlin
+
+```kotlin
+ // Range - é possível definir um intervalo de valores facilmente com o uso do when com o in ..
+    when (a) {
+        in 1..99 -> {
+            println("Século")
+        }
+    }
+```
+
+```kotlin
+println(str?.length) // Assume ao Kotlin que não pode dar erro. O erro não é disparado`
+println(str!!.length) // Assume ao Kotlin que pode dar erro. O erro é disparado
+```
  
  
