@@ -1,11 +1,12 @@
 
+
   
 
 ## Desenvolvimento de Aplicativos Android usando Kotlin!
 
   
 
-Curso na Udemy de desenvolvimentos de aplicativos com Kotlin. Link do Curso:https://www.udemy.com/course/curso-desenvolvedor-kotlin/. Mas o principal objetivo foi de aprender os conceitos básicos de Kotlin e não de Android.
+Curso na Udemy de desenvolvimentos de aplicativos com Kotlin. Link do Curso:https://www.udemy.com/course/curso-desenvolvedor-kotlin/. Mas o principal objetivo de ter feito esse curso foi de aprender os conceitos básicos de Kotlin e não de Android.
 
   
 
@@ -36,7 +37,7 @@ Abaixo, serão listados alguns recursos e definições de orientação de objeto
 
 Algumas definições de alguns conceitos de orientação de objeto e como utilizar alguns desses recursos com **Kotlin**.  
 
-**Herança:** Para que uma classe seja herdada por outra, precisamos que a classe pai tenha a palavra reservada de open, além disso, na classe filha, precisamos chamar o construtor da classe pai passando os parâmetros.  
+**Herança:** Para que uma classe seja herdada por outra, precisamos que a classe pai tenha a palavra reservada de `open`, além disso, na classe filha, precisamos chamar o construtor da classe pai passando os parâmetros.  
 
 **Overide:** Para sobrescrever métodos no Kotlin, é necessário a palavra reservada `open`.  
 
@@ -58,13 +59,13 @@ Algumas definições de alguns conceitos de orientação de objeto e como utiliz
 
 **lateinit:** É usado quando não se desejado criar uma variável com um valor, uma variável inicializada com `lateinit` sempre deve ser declarada com var, pois o que acontece por baixo dos panos é um atribuição automática.
 
-**with:** Se tivermos alguma variável que seja desejado fazer várias interações com ela, chamar seus métodos por ex, podemos fazer isso o with de uma forma muito mais simples, sem ter que repetir a varíavel a cada instrução.  
+**with:** Se tivermos alguma variável que seja desejado fazer várias interações com ela, chamar seus métodos por ex, podemos fazer isso o with de uma forma muito mais simples, sem ter que repetir a variável a cada instrução.  
 
 **init:** É a palavra reservada e serve para executado independente de quantidade construtores.
 
-**field:** É a palavra reservarda dentro de um contexto de get e set e serve para fazer uma atribuição(set) ou retorno(get) da variável em questão, pois usar o this diretamenta causa um loop chamando o método até estourar alguma exceção.
+**field:** É a palavra reservara dentro de um contexto de get e set e serve para fazer uma atribuição(set) ou retorno(get) da variável em questão, pois usar o this diretamente causa um loop chamando o método até estourar alguma exceção.
 
-**inner:** É a palavra reservarda para declarar Classe interna(Nested Class).
+**inner:** É a palavra reservada para declarar Classe interna(Nested Class).
 
 **sealed:**: É a palavra reservada que serve para não permitir o uso da classe em arquivos externos da classe os usos são de herança.
 
@@ -73,9 +74,9 @@ Algumas definições de alguns conceitos de orientação de objeto e como utiliz
 #### Métodos estáticos
 Como utilizar métodos estáticos no `Kotlin` e definições de cada recurso para fazer isso:  
 
-**Companion object:** Um objeto que não necessariamente tem um nome e serve para criar atributos, métodos que irão fica num escopo num estático. Em outras palavras, os recursos da classe que são declaradas dentro um companion object ficam no escopo da classe e não de uma instância da classe, pode-se criar hieraraquias, mas o nome é necessário para isso. Também é possível criar singletons com o mesmo
+**Companion object:** Um objeto que não necessariamente tem um nome e serve para criar atributos, métodos que irão fica num escopo num estático. Em outras palavras, os recursos da classe que são declaradas dentro um companion object ficam no escopo da classe e não de uma instância da classe, pode-se criar hierarquias, mas o nome é necessário para isso. Também é possível criar singletons com o mesmo
 
-**Object:** Tem os mesmo recursos de companion object, mas precisa ter um nome associado e com ele, podemos fazer uma hieraraquia de objets. Também é possível criar singletons com o mesmo.
+**Object:** Tem os mesmo recursos de companion object, mas precisa ter um nome associado e com ele, podemos fazer uma hierarquia de objects. Também é possível criar singletons com o mesmo.
 
 <a name="oa-data-class"/>  
 
@@ -85,7 +86,7 @@ Como esse é um recurso exclusivo de Kotlin e muito extenso, foi resolvido ter u
 
 O **data class** serve muito bem para agregar um conjunto de dados, num jeito mais prático, variáveis, pois ao invés de ter funções com vários parâmetros, pode-se ter um único parâmetro, sendo a data class com todos os parâmetros declarados como atributos.
 
-Além disso, com o **data class**, ganhamos um `toString` que é muito útil para transição desses dados. Outro benefício bem claro, é que por padrão, quando dois objetos de uma mesma classe comum são comparados, o que vai ser comparado vai ser a posição da memória desses dois objetos, já com o data class, já ganhamos um comparador no qual é comporado os valores de um objeto e não o sua posição na memória. Também ganhamos por default um método de `copy()` que é possível copiar um objeto A para um objeto B.  
+Além disso, com o **data class**, ganhamos um `toString` que é muito útil para transição desses dados. Outro benefício bem claro, é que por padrão, quando dois objetos de uma mesma classe comum são comparados, o que vai ser comparado vai ser a posição da memória desses dois objetos, já com o data class, já ganhamos um comparador no qual é comparado os valores de um objeto e não o sua posição na memória. Também ganhamos por default um método de `copy()` que é possível copiar um objeto A para um objeto B.  
 
 <a name="functions"/>
 
@@ -103,7 +104,7 @@ desejado dar um nome, apenas passar a função para uma execução.Diferente do 
 
   
 
-**High order function:**: Uma expressão lambda é uma maneira concisa de declarar uma função ou subrotina. Num mundo orientado a objetos, é bastante similar a um objeto que tem um método só. Existem duas vantagens principais de se usar uma expressão lambda ao invés de uma função ou método definida separadamante:
+**High order function:**: Uma expressão lambda é uma maneira concisa de declarar uma função ou sub-rotina. Num mundo orientado a objetos, é bastante similar a um objeto que tem um método só. Existem duas vantagens principais de se usar uma expressão lambda ao invés de uma função ou método definida separadamente:
 
   
 
@@ -119,7 +120,7 @@ desejado dar um nome, apenas passar a função para uma execução.Diferente do 
 
 **infix function:** Com a palavra reservada infix function, é possível executar funções com uma legibilidade muito maior que o normal. Esse recurso só pode ser usado com funções de um só parâmetro.
 
-**Funções internas:** São funções dentro de funções que só ficam acessíveis dentro da função pai, e caso tenha uma função externa com o mesmo nome que a interna e seja desajado executar a função externa, usamos a palavra reservada deeper.${functionName}
+**Funções internas:** São funções dentro de funções que só ficam acessíveis dentro da função pai, e caso tenha uma função externa com o mesmo nome que a interna e seja desejado executar a função externa, usamos a palavra reservada deeper.${functionName}
 
 **Operator overloading:** Com ele, é possível criar funções que somam um objeto a outro objeto e muito mais.
 
@@ -170,7 +171,7 @@ Abaixo, serão listados alguns recursos e definições de Listas, alguns que sã
 
 5. O método withIndex usado um for serve para além de ter o valor daquele elemento de array numa interação, também seja possível pegar o index.
 
-6. a palavra reservada it é o elemento default a ser interado dentro de um escopo de interação de uma lista como forEach, filter, map e etc...
+6. a palavra reservada it é o elemento default a ser iterado dentro de um escopo de interação de uma lista como forEach, filter, map e etc...
 
   
 <a name="recursos-interessantes"/>     
